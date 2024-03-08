@@ -40,4 +40,10 @@ class TransaksiController extends Controller
         $barang = Barang_gudang::where('id_barang', $id)->with('gudang')->get()->first();
         return response()->json(['data' => $barang]);
     }
+
+    function tes($id)
+    {
+        $barang = Barang_gudang::where('id_barang', $id)->with('gudang')->get()->first();
+        return response()->json(['data' => $barang]);
+    }
 }
